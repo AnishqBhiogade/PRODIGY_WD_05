@@ -24,9 +24,6 @@ Weatherforecast is a lightweight, responsive web application that allows users t
 ## 🧪 How to Use Locally
 
 ```bash
-git clone https://github.com/yourusername/weathernow.git
-cd weathernow
-open index.html
-
+git clone https://github.com/AnishqBhiogade/PRODIGY_WD_05.git
 
 ```

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Weather Forecast</h1>
+        <div class="temp-toggle">
+          <div
+            class="temp-unit active"
+            id="celsiusBtn"
+            onclick="toggleTemperature('celsius')"
+          >
+            °C
+          </div>
+          <div
+            class="temp-unit"
+            id="fahrenheitBtn"
+            onclick="toggleTemperature('fahrenheit')"
+          >
+            °F
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="search-section">
+          <button class="btn location-btn" onclick="getCurrentLocation()">
+            📍 Use My Location
+          </button>
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              id="locationInput"
+              placeholder="Enter city name..."
+              onkeypress="handleKeyPress(event)"
+            />
+            <button class="btn" onclick="searchWeather()">Search</button>
+          </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none">
+          Loading weather data...
+        </div>
+
+        <div id="error" class="error" style="display: none"></div>
+
+        <div id="weatherDisplay" class="weather-display">
+          <div class="location-name" id="locationName"></div>
+          <div class="coordinates" id="coordinates"></div>
+          <div class="weather-main">
+            <div class="weather-icon" id="weatherIcon"></div>
+            <div class="temperature" id="temperature"></div>
+          </div>
+          <div class="weather-description" id="weatherDescription"></div>
+          <div class="weather-details" id="weatherDetails"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
